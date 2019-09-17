@@ -17,4 +17,5 @@ group :development do
   gem "pry"
   gem 'sqlite3', '~> 1.3.6'
   gem "shotgun"
+  gem 'byebug'
 end
