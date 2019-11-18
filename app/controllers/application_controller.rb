@@ -28,18 +28,20 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/articles/:id' do
-    #READING ARTICLE
+    #DISPLAYING ARTICLE
     @article = Article.find(params[:id])
 
     erb :show
   end
 
   get '/articles/:id/edit' do
+    #ARTICLE EDIT PAGE
     @article = Article.find(params[:id])
     erb :edit
   end
 
   patch '/articles/:id' do  
+    #EDITED ARTICLE DISPLAY PAGE
     @article = Article.find(params[:id])
     title = params[:title]
     content = params[:content]
